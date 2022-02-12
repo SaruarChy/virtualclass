@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    
+}
+.ordernow_btn{
+    position: absolute;
+    right: 60px;
+    background: #54ce35;
+    color: white;
+    border: noen;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: 0px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(3, 3, 138);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1030e2; 
+  }
+.msg {
+    text-align: center;
+    background: #ec2511;
+    color: white;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 76% 75%, 38% 83%, 0 100%);
+    background: #2bb4ddfb;
+}
+
+.header_top .user_con {
+    text-align: right;
+    width: 100%;
+    height: 25px;
+
+}
+
+.header_top .user_con a {
+    padding: 3px 8px;
+    color: white;
+}
+
+.header_bottom .nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header_bottom .nav a {
+    /* color: #948484; */
+    color: black;
+    font-size: 1.3em;
+    padding: 2px 8px;
+    position: relative;
+}
+
+.header_bottom .nav a::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+/* -------------------------------product ------------- */
+
+
+
+
+.product_container .product {
+    height: 260px;
+    margin-top:10px;
+    display:flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    color:rgba(15, 15, 15, 0.658);
+}
+.product_container .product .img{
+    width:100%;
+    height:188px;
+}
+.product_container .product .img img{
+    width:100%;
+    height:100%;
+}
+.product_container .product .pro_details .pro_name,
+.product_container .product .pro_details .dis_price,
+.product_container .product .pro_details .pro_price{
+    padding-top:0px;
+    padding-left:5px;
+    display:block;
+}
+/* -----------------------  
+    end product
+*/
+
+/* -----------------------  
+    detail
+    --------------*/
+    .product_detail_all
+    {
+        margin:20px;
+    }
+    .product_detail_wrapper .img{
+        width:100%;
+        height:400px;
+    }
+    .product_detail_wrapper .img img{
+        width:100%;
+        height:100%;
+    }
+    .product_detail_wrapper .product_detail_des{
+        margin:100px;
+        border-bottom:1px solid rgb(231, 231, 231);
+    }
+    .product_detail_des .detail_name,
+    .product_detail_des .detail_brand,
+    .product_detail_des .detail_price,
+    .product_detail_des .detail_details{
+        margin-left:20px;
+        margin-top:10px;
+        font-size:15px;
+    }
+    .product_detail_des .detail_name{
+        color:rgb(255, 255, 0);
+    }
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- 
+    end detail 
+    ------------------------------------
+*/
+/* ---------------------------------- 
+    login
+    ------------------------------------
+*/
+.login,
+.signup {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+.login_wrapper,
+.signup_wrapper {
+    padding: 20px;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(25, 184, 212);
+}
+
+.login .login_header,
+.signup .signup_header {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.login .txt_field,
+.signup .txt_field {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    margin: 40px 0px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.login .txt_field input,
+.signup .txt_field input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 25px;
+    background: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.login .txt_field label,
+.signup .txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 20px;
+    transition: .4s ease;
+    color: rgba(255, 255, 255, 0.89);
+}
+
+.login .txt_field input:focus~label,
+.login .txt_field input:valid~label,
+.login .txt_field input:hover~label,
+.signup .txt_field input:focus~label,
+.signup .txt_field input:valid~label,
+.signup .txt_field input:hover~label {
+    top: -10px;
+}
+
+.login .txt_field label:hover,
+.signup .txt_field label:hover {
+    top: -10px;
+}
+
+
+.login .login_wrapper input[type="submit"],
+.signup .signup_wrapper input[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 3px 0px;
+    border-radius: 60px;
+    font-size: 1.3em;
+    color: black;
+    box-sizing: border-box;
+    border: 1.5px solid #fff;
+    transition: .2s ease-in-out;
+
+}
+
+.login .login_wrapper input[type="submit"]:hover,
+.singup .signup_wrapper input[type="submit"]:hover {
+    border: 1.5px solid rgba(25, 184, 212, 0.562);
+
+}
+
+.login .forgotpass,
+.signup .forgotpass {
+    text-align: center;
+    display: block;
+    margin: 15px 0px;
+    color: #0404b7;
+    font-size: 1.1em;
+}
+
+.login .forgotpass a {
+    text-decoration: none;
+}
+
+.login .signup_btn {
+    text-align: center;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/* ---------------------------------- 
+    end login
+    ------------------------------------
+
+*/
+
+/* ---------------------------------- 
+    admin panel
+    ------------------------------------
+
+*/
+.admin_deleteProduct_btn ,
+.admin_editProduct_btn{
+    cursor: pointer;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.admin_deleteProduct_btn{
+    background:red;
+}
+.admin_editProduct_btn{
+    background:rgb(8, 170, 8);
+}
+#admin_msg{
+        width: 50%;
+        margin: 10px auto;
+        background: #2bc0d8;
+        color: white;
+        font-size: 16px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        box-shadow: 1px 4px 5px -1px #3f6869c9;
+        text-align: center;
+        padding: 0px;
+}
+.admin_tab_active{
+    background:#1A2327;
+}
+.admin_tabcontent_active{
+    display:block;
+}
+.admin{
+    width:100%;
+    overflow: hidden;
+}
+.admin .admin_wrapper{
+    width:100%;
+    height:82.5vh;
+    overflow: hidden;
+}
+.admin_wrapper .admin_menu{
+
+   height: 82.5vh;
+   background: #263238;
+   overflow-y:scroll;
+}
+/* .admin_wrapper .admin_nav{
+    
+} */
+.admin_nav .tab{
+    width:100%;
+    height: 82.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow-y: scroll; */
+    text-align: center;
+}
+.admin_nav .tab li{
+    padding:10px 0px;
+    color:#fff;
+    width:100%;
+    cursor: pointer;
+    border-bottom:1px solid #0e1214;
+}
+.admin_nav .tab li:hover{
+    background:#1A2327;
+}
+
+.admin .admin_setting .welcome_admin_panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.admin .admin_setting{
+    background:rgb(240, 240, 240);
+        height:100vh;
+    
+}
+.admin .admin_setting .tabcontent{
+    display:none;
+    height:82.5vh;
+    overflow-y:scroll;
+}
+.admin .admin_setting h3{
+    margin:10px 0px;
+    text-align: center;
+}
+.admin .admin_setting .admin_add_pro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.admin_setting .admin_add_pro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:15px 0px;
+}
+.admin_setting .admin_add_pro .admin_pro_form{
+    width:400px;
+}
+.admin_pro_form .ad_txt_field{
+    width:100%;
+    margin-top:10px;
+}
+.admin_pro_form .ad_txt_field input{
+    border-bottom:1px solid gray;
+    height:20px;
+    width:100%;
+    outline: none;
+    border:none;
+}
+.admin_pro_form .ad_txt_field button{
+    border: none;
+    outline: none;
+    padding: 1px 22px;
+    background: #4bb316;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* ------------show product--------------- */
+.admin .product_count{
+    margin:10px 0px;
+}
+.admin .product_count .column{
+    margin:10px 10px;
+}
+
+.admin .pro_list_table_header .column ,
+.admin .pro_list_table_body .column{
+    flex-basis:calc(100%/7);
+    padding:5px 10px;
+    margin:0px 5px;
+
+}
+
+
+/* ------------end show product--------------- */
+
+/* ------------ edit form modal ---------  */
+#edit_modal_close_btn{
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    cursor: pointer;
+    color:#fff;
+}
+.admin_setting .edit_modal{
+    height:82.5vh;
+    overflow-y:scroll;
+    display:none;
+}
+/* .admin .admin_setting */
+ .edit_modal::after{
+     content:"";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: rgb(222 222 222);
+    opacity:.5;
+    z-index: 10;
+}
+/* .admin .admin_setting */
+ .edit_modal .modal_wrap{
+    /* border:2px solid red; */
+    /* overflow-y:scroll; */
+    /* display: none; */
+    /* height:71.5vh; */
+    /* height:100%; */
+    z-index: 11;
+    margin:30px auto;
+    background:#fbfbfb;
+}
+/* .admin .admin_setting .modal_wrap::after{
+   
+} */
+.edit_modal .modal_wrap{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  
+}
+/* .edit_modal .modal_wrap  */
+.admin_img_wrap{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px 0px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* overflow-y: scroll; */
+    display: flex;
+    padding: 11px;
+    box-sizing: border-box;
+    box-shadow: 4px 5px 11px 2px black;
+}
+/* .edit_modal .modal_wrap  */
+.admin_img_wrap .img{
+    flex-basis:30%;
+    height:200px;
+    margin:10px;
+    border: 1px solid #191616;
+    border-radius: 5px;
+}
+/* .edit_modal .modal_wrap */
+ .admin_img_wrap .img img{
+    width:100%;
+    height:100%;
+}
+
+.edit_modal .edit_form{
+    /* border:1px solid green; */
+    margin:10px 0px;
+    width:100%;
+}
+.edit_modal .edit_form #adminEditProuctFrom{
+    display:flex;
+    justify-content: space-evenly;
+}
+.edit_modal .edit_form .adminEditPro_formbox{
+    display:flex;
+    justify-content: center;
+}
+.edit_modal .edit_form .adminEditPro_form{
+    display:flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+   
+}
+.edit_modal .edit_form .adminEditPro_form .ad_txt_field{
+    margin:15px 0px;
+    margin-right:10px;
+}
+.edit_modal .edit_form .adminEditPro_form .ad_txt_field label{
+    width:100%;
+}
+
+/* ------------ endedit form modal ---------  */
+
+
+
+
+
+/* ---------------------------------- 
+    end end admin panel 263238 
+    ------------------------------------
+
+*/
+.footer{
+	padding:50px 0px;
+	width:100%;
+    background:#2c2528;
+    margin-top: 300px;
+    clip-path: polygon(56% 21%, 100% 4%, 100% 99%, 0 99%, 0 33%);
+}
+.footer .footer_top a{
+	text-decoration:none;
+	padding:5px;
+	text-align:center;
+	color:white;
+    display:block;
+    
+}
+.footer_top{
+    margin:0px 0px;
+}
+.footer_down{
+	width:100%;
+	text-align:center;
+	height:28px;
+	font-size:13px;
+	line-height:30px;
+	background:#000;
+    color:lightgray;
+    margin-top:0;
+}
+
+
+
