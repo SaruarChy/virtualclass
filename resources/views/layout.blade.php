@@ -12,6 +12,8 @@
 
 </head>
 
+@yield('content')
+
 <body>
 
 </body>
