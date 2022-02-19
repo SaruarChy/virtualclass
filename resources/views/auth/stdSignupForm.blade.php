@@ -5,11 +5,11 @@
     <div class="container">
         <div class="row justify-content-center" style="margin-top:100px;">
             <div class="col-12">
-                <h2 class="text-center text-primary">Teacher Signup</h2>
+                <h2 class="text-center text-primary">Student Signup</h2>
             </div>
             <div class="col-12 col-sm-10 col-md-5 align-items-center my-auto">
 
-                <form action="{{route('teacher.register')}}" method="POST">
+                <form action="{{route('student.register')}}" method="POST">
 
                     @if(Session::get('success'))
                     <div class="alert alert-success">
@@ -36,7 +36,7 @@
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
                 <p class="mt-3"> <a href="{{route('password.forgot')}}">Forgot password</a></p>
-                <p>I already have an account <a href="{{route('teacher.login.form')}}">sign in</a> now </p>
+                <p>I already have an account <a href="{{route('student.login.form')}}">sign in</a> now </p>
             </div>
         </div>
     </div>
