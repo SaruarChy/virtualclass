@@ -38,6 +38,8 @@ class authentication extends Controller
         $teacherAuth = new Teacher_auth();
 
         $teacherAuth->email = $req->email;
+        $teacherAuth->email_varified_at = Carbon::now();
+        $teacherAuth->teacherId = 1;
         $teacherAuth->password = Hash::make($req->password);
         $save = $teacherAuth->save();
         if ($save) {
@@ -137,6 +139,8 @@ class authentication extends Controller
         $studentAuth = new Student_auth();
 
         $studentAuth->email = $req->email;
+        $studentAuth->studentId = 1;
+        $studentAuth->email_varified_at = Carbon::now();
         $studentAuth->password = Hash::make($req->password);
         $studentAuth->email_varified_at  = Carbon::now();
         $save = $studentAuth->save();

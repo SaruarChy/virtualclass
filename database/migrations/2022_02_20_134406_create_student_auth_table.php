@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teacher_auth', function (Blueprint $table) {
+        Schema::create('student_auth', function (Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
             $table->string('password');
+            $table->bigInteger('sid')->unsigned();
+            $table->foreign('sid')->references('id')->on('students');
+            $table->date('email_varified_at');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teacher_auth');
+        Schema::dropIfExists('student_auth');
     }
 };
