@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('teachers_auth', function (Blueprint $table) {
+        Schema::create('teacher_class', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->bigInteger('tid')->unsigned();
-            $table->foreign('tid')->references('id')->on('teachers');
-            $table->date('email_varified_at');
+            $table->string('classCode')->unique();
+            $table->string('subCode');
+            $table->string('batch');
+            $table->string('department');
+            $table->bigInteger('teacherId')->unsigned();
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teachers_auth');
+        Schema::dropIfExists('teacher_class');
     }
 };

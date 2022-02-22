@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Teacher_auth;
 use App\Models\Student_auth;
+use App\Models\Teacher_class;
+use App\Models\Teachers;
+use App\Models\Students;
 use Illuminate\Support\Facades\Hash;
 use carbon\Carbon;
 // use Illuminate\Support\Facades\Auth;
@@ -17,6 +20,10 @@ use Symfony\Component\CssSelector\XPath\Extension\FunctionExtension;
 class authentication extends Controller
 {
     //
+    public function login()
+    {
+        return view('auth.login');
+    }
     public function teasignupform()
     {
         return view('auth.teaSignupForm');
@@ -35,17 +42,22 @@ class authentication extends Controller
             'email' => 'required|email|unique:teacher_auth',
             'password' => 'required|min:4'
         ]);
-        $teacherAuth = new Teacher_auth();
+        $checkTeacher = Teachers::where('email', '=', $req->email)->first();
+        if ($checkTeacher) {
+            $teacherAuth = new Teacher_auth();
 
-        $teacherAuth->email = $req->email;
-        $teacherAuth->email_varified_at = Carbon::now();
-        $teacherAuth->teacherId = 1;
-        $teacherAuth->password = Hash::make($req->password);
-        $save = $teacherAuth->save();
-        if ($save) {
-            return back()->with('success', 'Sign Up completed');
+            $teacherAuth->email = $req->email;
+            $teacherAuth->email_varified_at = Carbon::now();
+            $teacherAuth->tid = $checkTeacher->id;
+            $teacherAuth->password = Hash::make($req->password);
+            $save = $teacherAuth->save();
+            if ($save) {
+                return back()->with('success', 'Sign Up completed');
+            } else {
+                return back()->with('fail', 'Something went wrong , please try again!');
+            }
         } else {
-            return back()->with('fail', 'Something went wrong , please try again!');
+            return back()->with('fail', 'Your Record is not found in verstiy. make sure put the email which you have registerd in versitey');
         }
     }
 
@@ -55,12 +67,13 @@ class authentication extends Controller
             'email' => 'required|email',
             'password' => 'required|min:4'
         ]);
+
         $teacherInfo = Teacher_auth::where('email', '=', $req->email)->first();
 
         if ($teacherInfo) {
             if (Hash::check($req->password, $teacherInfo->password)) {
                 session()->put('teacherInfo', $teacherInfo);
-                return view('welcome');
+                return view('frontend/index');
                 // if (session()->has('teacherInfo')) {
                 //     return session('teacherInfo')['email'];
                 // } else {
@@ -133,21 +146,28 @@ class authentication extends Controller
     public function studentRegister(Request $req)
     {
         $req->validate([
-            'email' => 'required|email|unique:teacher_auth',
+            'email' => 'required|email|unique:student_auth',
             'password' => 'required|min:4'
         ]);
-        $studentAuth = new Student_auth();
 
-        $studentAuth->email = $req->email;
-        $studentAuth->studentId = 1;
-        $studentAuth->email_varified_at = Carbon::now();
-        $studentAuth->password = Hash::make($req->password);
-        $studentAuth->email_varified_at  = Carbon::now();
-        $save = $studentAuth->save();
-        if ($save) {
-            return back()->with('success', 'Sign Up completed');
+        $checkStudent = Students::where('email', '=', $req->email)->first();
+        if ($checkStudent) {
+
+            $studentAuth = new Student_auth();
+
+            $studentAuth->email = $req->email;
+            $studentAuth->sid = $checkStudent->id;
+            $studentAuth->email_varified_at = Carbon::now();
+            $studentAuth->password = Hash::make($req->password);
+            $studentAuth->email_varified_at  = Carbon::now();
+            $save = $studentAuth->save();
+            if ($save) {
+                return back()->with('success', 'Sign Up completed');
+            } else {
+                return back()->with('fail', 'Something went wrong , please try again!');
+            }
         } else {
-            return back()->with('fail', 'Something went wrong , please try again!');
+            return back()->with('fail', 'Your email is not recognized! Make sure this email is on the record');
         }
     }
     public function studentLogin(Request $req)

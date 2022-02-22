@@ -20,6 +20,10 @@
     <a href="{{route('teacher.signup.form')}}">teacher signup</a>
     <br>
     <a href="{{route('student.signup.form')}}">student signup</a>
+    <br>
+    <a href="{{route('login')}}">login</a>
+    <br>
+    <a href="{{route('myclass')}}">myclass</a>
 </div>
 
 
