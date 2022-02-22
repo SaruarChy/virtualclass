@@ -1,12 +1,14 @@
 const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const mobile_menu = document.querySelector('.mobile-nav');
 
+/*-------------opening side menu on mobile-----------*/
 hamburger.addEventListener("click", () =>{
     hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+    mobile_menu.classList.toggle('is-active');
 })
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+/*-------------closing side menu on mobile after click on menu-----------*/
+document.querySelectorAll(".mob-nav-close").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
+    mobile_menu.classList.remove("is-active");
 }))
