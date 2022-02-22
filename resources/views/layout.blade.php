@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>p400</title>
+    <title>Virtual Classroom</title>
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('js/app.js') }}" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href={{URL::asset('css/bootstrap.min.css')}}>
 
     <script src="{{URL::asset('js/jquery.js')}}"></script>
     <script src="{{URL::asset('js/bootstrap.min.js')}}"></script> -->
-    <link rel="stylesheet" href={{URL::asset('css/style.css')}}>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
+    <link rel="stylesheet" href={{URL::asset('css/style.css')}}>
 
 </head>
 
+{{View::make("frontend/navigationbar")}}
 @yield('content')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
