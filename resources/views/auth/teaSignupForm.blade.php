@@ -36,7 +36,7 @@
                     <button type="submit" class="btn btn-primary">Sign Up</button>
                 </form>
                 <p class="mt-3"> <a href="{{route('password.forgot')}}">Forgot password</a></p>
-                <p>I already have an account <a href="{{route('teacher.login.form')}}">sign in</a> now </p>
+                <p>I already have an account <a href="{{route('login')}}">sign in</a> now </p>
             </div>
         </div>
     </div>

@@ -5,12 +5,12 @@
             <nav class="navbar">
                 <ul class="nav-menu">
                     <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
-                    <li  class="nav-item"><a class="nav-link" href="#">COURSES</a></li>
-                    <li  class="nav-item"><a class="nav-link" href="#">NOTICE</a></li>
-                    <li  class="nav-item"><a class="nav-link" href="#">MY CLASS</a></li>
-                    <li  class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">COURSES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">NOTICE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">MY CLASS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
                     <li>
-                        <div class="signup_dropdown" >
+                        <div class="signup_dropdown">
                             <a class="nav-link" href="">SIGNUP</a>
                             <div class="dropdown-content" style="right:0;">
                                 <ul>

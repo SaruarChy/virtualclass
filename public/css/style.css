@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
 * {
     padding: 0px;
     margin: 0;
     box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
 }
-<<<<<<< Updated upstream
+
 li {
     list-style: none;
 }
-li, .nav-link {
+
+li,
+.nav-link {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -20,11 +24,14 @@ li, .nav-link {
     background-color: #000000;
     text-decoration: none;
 }
-.nav__header { /* Dropdown Button */
+
+.nav__header {
+    /* Dropdown Button */
     background: #000000;
     align-items: center;
     padding: 10px 5%;
 }
+
 .navbar {
     min-height: 70px;
     display: flex;
@@ -32,26 +39,31 @@ li, .nav-link {
     align-items: center;
     padding: 0 24px;
 }
+
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
+
 .nav-branding {
     cursor: pointer;
     margin-right: auto;
 }
+
 .nav-link {
     transition: 0.7s ease;
 }
+
 .nav-link:hover {
     color: dodgerblue;
 }
+
 .login_btn {
     display: inline-block;
     margin-left: 20px;
-    
+
     width: 100px;
     height: 40px;
     color: #000000;
@@ -61,6 +73,7 @@ li, .nav-link {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
+
 .login_btn-a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -69,13 +82,16 @@ li, .nav-link {
     text-align: center;
     color: #000000;
 }
+
 .login_btn:hover {
     background-color: rgba(30, 144, 255, 0.7);
 }
+
 .hamburger {
     display: none;
     cursor: pointer;
 }
+
 .bar {
     display: block;
     width: 25px;
@@ -85,21 +101,26 @@ li, .nav-link {
     transition: all 0.3s ease-in-out;
     background-color: #ffffff;
 }
-@media(max-width:992px){
-    .hamburger{
+
+@media(max-width:992px) {
+    .hamburger {
         display: block;
     }
+
     .hamburger-padding {
         padding-left: 30px;
         vertical-align: middle;
         z-index: 1000;
     }
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
@@ -116,9 +137,11 @@ li, .nav-link {
         text-align: center;
         transition: 0.3s;
     }
+
     .nav-item {
         margin: 16px 0;
     }
+
     .nav-menu.active {
         left: 0;
     }
@@ -126,39 +149,39 @@ li, .nav-link {
 
 /* Dropdown Button */
 
-  .signup_dropdown {
+.signup_dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #000000;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
+}
 
-  .dropdown-content a {
+
+.dropdown-content a {
     color: #ffffff;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
+}
 
-  .dropdown-content a:hover {
+
+.dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.8);
-  }
+}
 
-  .signup_dropdown:hover .dropdown-content {
-      display: block;
-  }
+.signup_dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Dropdown Button */
-=======
 
 
 /* =========== login tabs css=================== */
@@ -208,4 +231,3 @@ li, .nav-link {
 }
 
 /* ================== login tabs css end===================== */
->>>>>>> Stashed changes

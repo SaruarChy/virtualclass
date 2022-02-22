@@ -5,17 +5,17 @@
     <div class="container">
         <div class="row justify-content-center" style="margin-top:100px;">
             <div class="col-12">
-                <h2 class="text-center text-primary">Student Signup</h2>
+                <h2 class="text-center text-primary">Student Login</h2>
             </div>
             <div class="col-12 col-sm-10 col-md-5 align-items-center my-auto">
 
-                <form action="{{route('student.register')}}" method="POST">
-
+                <form action="{{route('student.login')}}" method="POST">
                     @if(Session::get('success'))
                     <div class="alert alert-success">
                         {{Session::get('success')}}
                     </div>
                     @endif
+
                     @if(Session::get('fail'))
                     <div class="alert alert-danger">
                         {{Session::get('fail')}}
@@ -33,10 +33,10 @@
                         <span class="text-danger">@error('password'){{$message}} @enderror</span>
                     </div>
                     <br>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
                 </form>
                 <p class="mt-3"> <a href="{{route('password.forgot')}}">Forgot password</a></p>
-                <p>I already have an account <a href="{{route('login')}}">sign in</a> now </p>
+                <p>I don't have any account <a href="{{route('student.signup.form')}}">sign up</a> now </p>
             </div>
         </div>
     </div>
