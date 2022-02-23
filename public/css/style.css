@@ -16,15 +16,13 @@ li {
 }
 
 /*-------------navigation bar design start-----------*/
-.nav-menu li,
-.nav-link {
+.nav-menu li, .nav-link {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 13px;
     color: #ffffff;
     background-color: #23252A;
-
     text-decoration: none;
 }
 
@@ -82,9 +80,9 @@ li {
 .dropdown-content {
     display: none;
     position: absolute;
+    min-width: 140px;
     background-color: #23252A;
-    ;
-    min-width: 145px;
+    padding: 0px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -104,7 +102,9 @@ li {
 .signup_dropdown:hover .dropdown-content {
     display: block;
 }
-
+.show {
+    display: block;
+}
 /*-------------Dropdown button for signup ends-----------*/
 
 /*-------------login button design start-----------*/
@@ -161,7 +161,7 @@ li {
 /*-------------Hamburger side menu design ends-----------*/
 
 /*-------------Hiding navigation bar on small screen and showing sidebar start-----------*/
-@media(max-width:897px) {
+@media(max-width:858px) {
     .hamburger {
         display: block;
     }
@@ -204,7 +204,7 @@ li {
 .mobile-nav {
     position: absolute;
     top: 0;
-    right: -100%;
+    left: -100%;
     width: 50%;
     min-height: 50vh;
     display: block;
@@ -212,7 +212,7 @@ li {
     background-color: #12002F;
     padding-top: 40px;
     padding-bottom: 20px;
-    transition: 0.4s;
+    transition: 0.9s;
 }
 
 .mobile-nav a {
@@ -232,9 +232,8 @@ li {
 }
 
 .mobile-nav.is-active {
-    right: 0;
+    left: 50%;
 }
-
 /*-------------Mobile navigation bar design ends-----------*/
 
 /* =========== login tabs css=================== */

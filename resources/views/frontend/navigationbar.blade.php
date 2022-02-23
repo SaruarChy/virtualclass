@@ -11,12 +11,10 @@
                     <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
                     <li>
                         <div class="signup_dropdown">
-                            <a class="nav-link" href="">SIGNUP</a>
+                            SIGNUP
                             <div class="dropdown-content" style="right:0;">
-                                <ul>
-                                    <li class="nav-item"><a class="nav-link" href="{{route('teacher.signup.form')}}">AS A TEACHER</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="{{route('student.signup.form')}}">AS A STUDENT</a></li>
-                                </ul>
+                                    <a class="nav-link" href="{{route('teacher.signup.form')}}">AS A TEACHER</a>
+                                    <a class="nav-link" href="{{route('student.signup.form')}}">AS A STUDENT</a>
                             </div>
                         </div>
                     </li>
@@ -36,14 +34,14 @@
 </header>
 <!-------------opening side menu on mobile----------->
 <nav class="mobile-nav">
-    <ul>
-        <li><a class="mob-nav-close" href="#">HOME</a></li>
-        <li><a class="mob-nav-close" href="#">COURSES</a></li>
-        <li><a class="mob-nav-close" href="#">NOTICE</a></li>
-        <li><a class="mob-nav-close" href="{{route('myclass')}}">MY CLASS</a></li>
-        <li><a class="mob-nav-close" href="#">ABOUT</a></li>
-        <li><a class="mob-nav-close" href="{{route('teacher.signup.form')}}">SIGNUP AS A TEACHER</a></li>
-        <li><a class="mob-nav-close" href="{{route('student.signup.form')}}">SIGNUP AS A STUDENT</a></li>
-    </ul>
+    <div>
+        <a class="mob-nav-close" href="#">HOME</a>
+        <a class="mob-nav-close" href="#">COURSES</a>
+        <a class="mob-nav-close" href="#">NOTICE</a>
+        <a class="mob-nav-close" href="{{route('myclass')}}">MY CLASS</a>
+        <a class="mob-nav-close" href="#">ABOUT</a>
+        <a class="mob-nav-close" href="{{route('teacher.signup.form')}}">SIGNUP AS A TEACHER</a>
+        <a class="mob-nav-close" href="{{route('student.signup.form')}}">SIGNUP AS A STUDENT</a>
+    </div>
 </nav>
 <script src="{{URL::asset('js/navbar.js')}}"></script>
