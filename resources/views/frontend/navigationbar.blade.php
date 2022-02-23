@@ -4,7 +4,7 @@
             <a class="nav-branding" href="#"><img src="{{URL::asset('logo/online-class-icon.png')}}" alt="logo" width="60"></a>
             <nav class="navbar">
                 <ul class="nav-menu">
-                    <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url('/')}}">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">COURSES</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">NOTICE</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('myclass')}}">MY CLASS</a></li>
@@ -22,7 +22,10 @@
                     </li>
                 </ul>
             </nav>
+
             <button class="login_btn" type="button"><a class="login_btn-a" href="{{route('login')}}">LOGIN</a></button>
+
+
             <div class="hamburger hamburger-padding">
                 <span class="bar"></span>
                 <span class="bar"></span>

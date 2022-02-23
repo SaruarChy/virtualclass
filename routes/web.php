@@ -49,3 +49,4 @@ Route::get('login', [Authentication::class, 'login'])->name('login');
 // ===============================   all classes ============================
 
 Route::get('teacher/myclass', [Classes::class, 'teacherClass'])->name('myclass');
+Route::post('create/class', [Classes::class, 'createClass'])->name('create.class');

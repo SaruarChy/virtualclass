@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-12">
+            <div class="col-12" style="margin-top:50px;">
                 <h2 class="text-center">Login</h2>
                 <div class="login-tab">
                     <button class="tablinks" onclick="loginTabConfig(event, 'teacher')">As A teacher</button>
@@ -12,9 +12,9 @@
                 </div>
 
                 <div id="teacher" class="login-tabcontent">
-                    <div class="row justify-content-center" style="margin-top:100px;">
+                    <div class="row justify-content-center">
                         <div class="col-12">
-                            <h2 class="text-center text-primary">Teacher Login</h2>
+                            <p class="text-center text-primary teacher_login_text">Teacher Login</p>
                         </div>
                         <div class="col-12 col-sm-10 col-md-5 align-items-center my-auto">
 
@@ -51,9 +51,9 @@
                 </div>
 
                 <div id="student" class="login-tabcontent">
-                    <div class="row justify-content-center" style="margin-top:100px;">
+                    <div class="row justify-content-center">
                         <div class="col-12">
-                            <h2 class="text-center text-primary">Student Login</h2>
+                            <p class="text-center text-primary student_login_text">Student Login</p>
                         </div>
                         <div class="col-12 col-sm-10 col-md-5 align-items-center my-auto">
 
