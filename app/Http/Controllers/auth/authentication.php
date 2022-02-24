@@ -45,7 +45,6 @@ class authentication extends Controller
         $checkTeacher = Teachers::where('email', '=', $req->email)->first();
         if ($checkTeacher) {
             $teacherAuth = new Teacher_auth();
-
             $teacherAuth->email = $req->email;
             $teacherAuth->email_varified_at = Carbon::now();
             $teacherAuth->tid = $checkTeacher->id;
@@ -94,7 +93,7 @@ class authentication extends Controller
         if (session()->has('studentInfo')) {
             session()->pull('studentInfo');
         }
-        return redirect('teacher/login/form');
+        return redirect('login');
     }
     // forgot password form
 

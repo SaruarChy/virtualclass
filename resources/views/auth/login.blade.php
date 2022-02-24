@@ -19,17 +19,7 @@
                         <div class="col-12 col-sm-10 col-md-5 align-items-center my-auto">
 
                             <form action="{{route('teacher.login')}}" method="POST">
-                                <!-- @if(Session::get('success'))
-                                <div class="alert alert-success">
-                                    {{Session::get('success')}}
-                                </div>
-                                @endif
 
-                                @if(Session::get('fail'))
-                                <div class="alert alert-danger">
-                                    {{Session::get('fail')}}
-                                </div>
-                                @endif -->
                                 @csrf
                                 <div class="form-group">
                                     <label for="email">Email</label>
@@ -98,6 +88,7 @@
 @section('javascript')
 <script>
     function loginTabConfig(evt, users) {
+        console.log(evt);
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("login-tabcontent");
         for (i = 0; i < tabcontent.length; i++) {

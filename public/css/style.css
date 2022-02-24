@@ -16,7 +16,8 @@ li {
 }
 
 /*-------------navigation bar design start-----------*/
-.nav-menu li, .nav-link {
+.nav-menu li,
+.nav-link {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -102,9 +103,11 @@ li {
 .signup_dropdown:hover .dropdown-content {
     display: block;
 }
+
 .show {
     display: block;
 }
+
 /*-------------Dropdown button for signup ends-----------*/
 
 /*-------------login button design start-----------*/
@@ -234,6 +237,7 @@ li {
 .mobile-nav.is-active {
     left: 50%;
 }
+
 /*-------------Mobile navigation bar design ends-----------*/
 
 /* =========== login tabs css=================== */
@@ -329,5 +333,48 @@ li {
 .teacher_class_section {
     padding: 30px 0px;
 }
+
+.teacher_class .class_wrap {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+
+.teacher_class .class_wrap .class_box {
+
+
+    text-align: center;
+
+    box-sizing: border-box;
+    border: 1px solid #bdf3da;
+    margin: 10px;
+    height: 180px;
+    box-shadow: 0px 0px 7px #88edbe;
+    transition: .2s ease-in;
+}
+
+.teacher_class .class_wrap .class_box:hover {
+    background: #bdf3dacf;
+}
+
+@media only screen and (max-width:862px) {
+    .teacher_class .class_wrap {
+
+        grid-template-columns: auto auto auto;
+
+    }
+
+}
+
+@media only screen and (max-width:579px) {
+    .teacher_class .class_wrap {
+
+        grid-template-columns: auto auto auto;
+
+    }
+
+
+}
+
 
 /* ===================== teacher_class end========================= */
