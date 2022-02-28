@@ -97,7 +97,8 @@ li {
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
+    background-color: rgba(12, 241, 136, 0.8);
 }
 
 .signup_dropdown:hover .dropdown-content {
@@ -164,7 +165,7 @@ li {
 /*-------------Hamburger side menu design ends-----------*/
 
 /*-------------Hiding navigation bar on small screen and showing sidebar start-----------*/
-@media(max-width:858px) {
+@media(max-width:895px) {
     .hamburger {
         display: block;
     }
@@ -264,10 +265,7 @@ li {
 /* display: inline-block; */
 /* Change background color of buttons on hover */
 .login-tab button:hover {
-
     color: #ffffff;
-
-
     background-color: #10b167;
     box-shadow: 1px 1px 4px #10b167;
 }
@@ -279,7 +277,6 @@ li {
     outline: none;
     color: #ffffff;
     box-shadow: 1px 1px 4px #10b167;
-    box-shadow: 1px 1px 4px #0cf188;
 }
 
 /* Style the tab content */
@@ -289,18 +286,16 @@ li {
     border-top: none;
 }
 
-.teacher_login_text,
-.student_login_text {
+.teacher_login_text, .student_login_text {
     padding: 10px;
     font-size: 20px;
-    font-family: ''Montserrat'';
     font-family: 'Montserrat', sans-serif;
 }
 
 /* ================== login tabs css end===================== */
 
 
-/* ===================== teacher_class start========================= */
+/* ===================== teacher_class start===================== */
 .create_class_btn {
     outline: none;
     border: none;
@@ -323,7 +318,6 @@ li {
     border: none;
     outline: none;
     background: #1c7e51;
-    ;
 }
 
 .class_btn_div {
@@ -335,46 +329,89 @@ li {
 }
 
 .teacher_class .class_wrap {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-
+    display: flex;
+    align-content: center;
 }
-
+.flex-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
 .teacher_class .class_wrap .class_box {
-
-
-    text-align: center;
-
+    text-align: left;
     box-sizing: border-box;
-    border: 1px solid #bdf3da;
+    border: 1px solid #D7D7D7;
     margin: 10px;
-    height: 180px;
-    box-shadow: 0px 0px 7px #88edbe;
+    height: 300px;
+    width: 300px;
     transition: .2s ease-in;
 }
-
+.class_box {
+    background-color: #ffffff8c;
+    border-radius: 10px;
+    white-space: nowrap;
+}
+.cut-text { 
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 280px;
+    white-space: nowrap;
+  }
+.class_box_content {
+    color: #12002F;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 24px;
+    line-height: 26px;
+    display: inline-block;
+    overflow: hidden;
+}
+.class_box_content .class_name {
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.class_box_content .batch_name {
+    color: #000000;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 50px;
+}
+.class_box_content .teacher_image {
+    border-radius: 50px;
+    text-align: left;
+    
+}
+.teacher_name {
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    line-height: 20px;
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
 .teacher_class .class_wrap .class_box:hover {
-    background: #bdf3dacf;
+    box-shadow: 1px 2px 10px 4px rgba(0, 0, 0, 0.2);
 }
+/* ===================== teacher_class ends===================== */
 
-@media only screen and (max-width:862px) {
-    .teacher_class .class_wrap {
-
-        grid-template-columns: auto auto auto;
-
-    }
-
-}
-
-@media only screen and (max-width:579px) {
-    .teacher_class .class_wrap {
-
-        grid-template-columns: auto auto auto;
-
-    }
-
-
-}
-
-
-/* ===================== teacher_class end========================= */
