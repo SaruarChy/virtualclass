@@ -1,7 +1,7 @@
 <header>
-    <div class="row  nav__header">
+    <div class="nav__header">
         <div class="col-12 d-flex justify-content-end nav-bar-design">
-            <a class="nav-branding" href="#"><img src="{{URL::asset('logo/online-class-icon.png')}}" alt="logo" width="60"></a>
+            <a class="nav-branding" href="{{url('/')}}"><img src="{{URL::asset('logo/online-class-icon.png')}}" alt="logo" width="60"></a>
             <nav class="navbar">
                 <ul class="nav-menu">
                     <li class="nav-item"><a class="nav-link" href="{{url('/')}}">HOME</a></li>
@@ -21,7 +21,7 @@
                 </ul>
             </nav>
 
-            <button class="login_btn" type="button"><a class="login_btn-a" href="{{route('login')}}">LOGIN</a></button>
+            <a class="login_btn-a" href="{{route('login')}}"><button class="login_btn" type="button">LOGIN</button></a>
 
 
             <div class="hamburger hamburger-padding">
