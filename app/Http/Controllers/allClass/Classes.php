@@ -49,10 +49,10 @@ class Classes extends Controller
             // $save = DB::table('teacher_class')->insert($values);
 
             $teacherClass = new Teacher_class();
-            $teacherClass->classCode = $req->classCode;
-            $teacherClass->subCode = $req->subCode;
-            $teacherClass->batch = $req->batch;
-            $teacherClass->department = $req->department;
+            $teacherClass->classCode = json_encode($req->classCode);
+            $teacherClass->subCode = json_encode($req->subCode);
+            $teacherClass->batch = json_encode($req->batch);
+            $teacherClass->department = json_encode($req->department);
             $save = $teacherClass->save();
             if ($save) {
                 return response()->json(['status' => 1, 'msg' => 'New Class has been created']);

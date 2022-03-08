@@ -13,8 +13,8 @@
                         <div class="signup_dropdown">
                             SIGNUP
                             <div class="dropdown-content" style="right:0;">
-                                    <a class="nav-link" href="{{route('teacher.signup.form')}}">AS A TEACHER</a>
-                                    <a class="nav-link" href="{{route('student.signup.form')}}">AS A STUDENT</a>
+                                <a class="nav-link" href="{{route('teacher.signup.form')}}">AS A TEACHER</a>
+                                <a class="nav-link" href="{{route('student.signup.form')}}">AS A STUDENT</a>
                             </div>
                         </div>
                     </li>
@@ -38,7 +38,7 @@
         <a class="mob-nav-close" href="#">HOME</a>
         <a class="mob-nav-close" href="#">COURSES</a>
         <a class="mob-nav-close" href="#">NOTICE</a>
-        <a class="mob-nav-close" href="{{route('myclass')}}">MY CLASS</a>
+        <a class="mob-nav-close" href="{{route('myclass')}}">teacher CLASS</a>
         <a class="mob-nav-close" href="#">ABOUT</a>
         <a class="mob-nav-close" href="{{route('teacher.signup.form')}}">SIGNUP AS A TEACHER</a>
         <a class="mob-nav-close" href="{{route('student.signup.form')}}">SIGNUP AS A STUDENT</a>

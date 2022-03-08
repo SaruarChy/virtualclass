@@ -97,7 +97,7 @@
 
                         <div class="col-8 col-sm-10 col-md-10 align-items-center my-auto">
                             <form action="{{route('create.class')}}" method="POST" id="createNewClas">
-                                @csrf
+                                <!-- @csrf -->
                                 <div class="form-group">
                                     <label for="classCode">Clascode</label>
                                     <input type="text" name="classCode" id="classCode" class="form-control" placeholder="Enter your classCode" value="{{old('classCode')}}">
