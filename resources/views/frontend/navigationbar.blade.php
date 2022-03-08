@@ -7,7 +7,8 @@
                     <li class="nav-item"><a class="nav-link" href="{{url('/')}}">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">COURSES</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">NOTICE</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('myclass')}}">MY CLASS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('myclass')}}">teacher CLASS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('studentClass')}}">student CLASS</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
                     <li>
                         <div class="signup_dropdown">

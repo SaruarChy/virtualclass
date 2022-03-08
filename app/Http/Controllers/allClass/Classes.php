@@ -5,6 +5,7 @@ namespace App\Http\Controllers\allClass;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Teacher_class;
+use App\Models\Teachers;
 use Dotenv\Validator as DotenvValidator;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Support\Facades\DB;
@@ -18,8 +19,17 @@ class Classes extends Controller
     public function teacherClass()
     {
         // return view('allClass/teacherClass');
-        $classes = Teacher_class::all();
-        return view('allClass.teacherClass', compact('classes'));
+        $classes = Teacher_class::where('teacherId', '1')->get();
+        $teacher = Teachers::find(1);
+        return view('allClass.teacherClass', compact('classes', 'teacher'));
+        // return $classes;
+    }
+
+    public function studentClass()
+    {
+        $classDetails = \App\Models\student_class::with('classes', 'class_teacher')->where('sid', '=', '1')->get();
+        return view('allClass.studentClass', compact('classDetails'));
+        // $detail['classes'][0]->subCode
     }
     public function createClass(Request $req)
     {

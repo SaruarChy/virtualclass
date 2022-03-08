@@ -61,149 +61,63 @@
 
 <div class="teacher_class">
     <div class="col-12 ">
+        @if($classes->isEmpty())
+        <span class="text-center">
+            there is no class
+        </span>
+        @else
         <div class="class_wrap flex-container">
-            @for ($x = 0; $x <= 10; $x++)
-                <div class="class_box">
-                    <div class="class_box_content">
-                        <div class="cut-text class_name">
-                            Class name aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                        </div>
-                        <div class="batch_name">
-                            45, 46
-                        </div>
-                        <div style="padding-left: 15px;">
-                            <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                        </div>
-                        <div class="teacher_name cut-text">
-                            My name is King Khan
-                        </div>
+            @foreach($classes as $class)
+            <div class="class_box">
+                <div class="class_box_content">
+                    <div class="cut-text class_name">
+                        <h3>
+                            class name
+                        </h3>
+                    </div>
+                    <div class="cut-text class_name">
+                        {{$class['name']}}
+                    </div>
+                    <div class="batch_name">
+                        {{$class->batch}}
+                    </div>
+                    <div style="padding-left: 15px;">
+                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
+                    </div>
+                    <div class="teacher_name cut-text">
+                        {{$teacher->name}}
                     </div>
                 </div>
-            @endfor
+            </div>
+            @endforeach
         </div>
+        @endif
     </div>
 </div>
-
-{{-- <div class="teacher_class">
+<!-- 
+<div class="teacher_class">
     <div class="col-12 ">
         <div class="class_wrap flex-container">
             <div class="class_box">
                 <div class="class_box_content">
-                    <div class="cut-text">
+                    <div class="cut-text class_name">
                         Class name aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     </div>
                     <div class="batch_name">
                         45, 46
                     </div>
-                    <div>
+                    <div style="padding-left: 15px;">
                         <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
                     </div>
                     <div class="teacher_name cut-text">
                         My name is King Khan
                     </div>
                 </div>
+
             </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text">
-                        Class name
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div>
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
-            </div>
-            
-            
+
         </div>
     </div>
-</div> --}}
-
+</div> -->
 <script src="{{URL::asset('js/createNewClass.js')}}"></script>
 @endsection
