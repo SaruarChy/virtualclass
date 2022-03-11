@@ -58,7 +58,6 @@
     </div>
 </div>
 
-
 <div class="teacher_class">
     <div class="col-12 ">
         @if($classes->isEmpty())
@@ -70,23 +69,22 @@
             @foreach($classes as $class)
             <div class="class_box">
                 <div class="class_box_content">
-                    <div class="cut-text class_name">
-                        <h3>
-                            class name
-                        </h3>
-                    </div>
-                    <div class="cut-text class_name">
-                        {{$class['name']}}
-                    </div>
-                    <div class="batch_name">
-                        {{$class->batch}}
-                    </div>
-                    <div style="padding-left: 15px;">
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        {{$teacher->name}}
-                    </div>
+                    <a href="{{route("stream")}}">
+                        <div class="cut-text class_name">
+                            <h3>
+                                Class nameffffffffffffffffffffffffffffffffffffff
+                            </h3>
+                        </div>
+                        <div class="batch_name">
+                            <p>{{$class->batch}}</p>
+                        </div>
+                        <div style="padding-left: 15px;">
+                            <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
+                        </div>
+                        <div class="teacher_name cut-text">
+                            <p>{{$teacher->name}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
             @endforeach
@@ -94,30 +92,7 @@
         @endif
     </div>
 </div>
-<!-- 
-<div class="teacher_class">
-    <div class="col-12 ">
-        <div class="class_wrap flex-container">
-            <div class="class_box">
-                <div class="class_box_content">
-                    <div class="cut-text class_name">
-                        Class name aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-                    </div>
-                    <div class="batch_name">
-                        45, 46
-                    </div>
-                    <div style="padding-left: 15px;">
-                        <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                    </div>
-                    <div class="teacher_name cut-text">
-                        My name is King Khan
-                    </div>
-                </div>
 
-            </div>
 
-        </div>
-    </div>
-</div> -->
 <script src="{{URL::asset('js/createNewClass.js')}}"></script>
 @endsection
