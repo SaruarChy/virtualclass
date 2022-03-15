@@ -10,29 +10,32 @@
             @else
             <div class="class_wrap flex-container">
                 @foreach($classDetails as $detail)
-                <div class="class_box">
-                    <div class="class_box_content">
-                        <div class="cut-text class_name">
-                            <h3>
-                                class name
-                            </h3>
-                        </div>
-                        <div class="cut-text class_name">
-                            <p>
-                                subcode : <span>{{$detail['classes'][0]->subCode}}</span>
-                            </p>
-                        </div>
-                        <div class="batch_name">
+                <a href="{{url('stream/'. $detail['classes'][0]->classCode)}}">
+                    <div class="class_box">
+                        <div class="class_box_content">
+                            <div class="cut-text class_name">
+                                <h3>
+                                    class name
+                                </h3>
+                            </div>
+                            <div class="cut-text class_name">
+                                <p>
+                                    subcode : <span>{{$detail['classes'][0]->subCode}}</span>
+                                </p>
+                            </div>
+                            <div class="batch_name">
 
-                        </div>
-                        <div style="padding-left: 15px;">
-                            <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
-                        </div>
-                        <div class="teacher_name cut-text">
-                            teacherName : <span>{{$detail['class_teacher'][0]->name}}</span>
+                            </div>
+                            <div style="padding-left: 15px;">
+                                <img class="teacher_image" src="{{URL::asset('image/teacher.jpg')}}" alt="image" width="80">
+                            </div>
+                            <div class="teacher_name cut-text">
+                                teacherName : <span>{{$detail['class_teacher'][0]->name}}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+
                 @endforeach
             </div>
             @endif

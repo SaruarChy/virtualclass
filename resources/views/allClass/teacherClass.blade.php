@@ -4,7 +4,7 @@
 
 <div class="container teacher_class_section">
     <div class="class_btn_div">
-        <button type="button" class="create_class_btn" data-toggle="modal" data-target="#myModal">Create Class</button>
+        <button type="button" class="create_class_btn" data-toggle="modal" data-target="#myModal">Create class don't use it</button>
     </div>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -58,8 +58,12 @@
     </div>
 </div>
 
+
+
 <div class="teacher_class">
     <div class="col-12 ">
+        <a href="{{url('createClassView')}}" class="text-center"><button type="button" class="create_class_btn">Create Class</button>
+        </a>
         @if($classes->isEmpty())
         <span class="text-center">
             there is no class
@@ -69,7 +73,7 @@
             @foreach($classes as $class)
             <div class="class_box">
                 <div class="class_box_content">
-                    <a href="{{route("stream")}}">
+                    <a href="{{url('stream/'. $class->classCode)}}">
                         <div class="cut-text class_name">
                             <h3>
                                 Class nameffffffffffffffffffffffffffffffffffffff

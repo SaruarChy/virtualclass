@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
+/* 
+html {
+    overflow-x: hidden;
+} */
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
+    overflow-x: hidden;
     padding: 0px !important;
     margin: 0px !important;
     box-sizing: border-box;
@@ -286,7 +297,8 @@ li {
     border-top: none;
 }
 
-.teacher_login_text, .student_login_text {
+.teacher_login_text,
+.student_login_text {
     padding: 10px;
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
@@ -332,14 +344,15 @@ li {
     display: flex;
     align-content: center;
 }
+
 .flex-container {
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
+}
+
 .teacher_class .class_wrap .class_box {
     text-align: left;
     box-sizing: border-box;
@@ -349,22 +362,27 @@ li {
     width: 300px;
     transition: .2s ease-in;
 }
-.class_box_content{
+
+.class_box_content {
     overflow: hidden;
     width: 100%;
 }
-.class_box_content a{
+
+.class_box_content a {
     text-decoration: none;
     color: #000000;
 }
+
 .class_box {
     background-color: #ffffff8c;
     border-radius: 10px;
 }
+
 .cut-text {
     width: 280px;
     white-space: nowrap;
 }
+
 .class_box_content .class_name {
     overflow: hidden;
     color: #000000;
@@ -375,6 +393,7 @@ li {
     line-height: 22px;
     padding: 20px 15px 0 15px;
 }
+
 .class_box_content .batch_name {
     color: #000000;
     font-weight: 500;
@@ -386,11 +405,13 @@ li {
     padding-left: 15px;
     padding-bottom: 40px;
 }
+
 .class_box_content .teacher_image {
     border-radius: 50px;
     text-align: left;
-    
+
 }
+
 .teacher_name {
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
@@ -404,11 +425,12 @@ li {
     padding-left: 15px;
     padding-bottom: 10px;
 }
+
 .teacher_class .class_wrap .class_box:hover {
     box-shadow: 1px 2px 10px 4px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
     transition: 0.3s;
     cursor: pointer;
 }
-/* ===================== teacher_class ends===================== */
 
+/* ===================== teacher_class ends===================== */

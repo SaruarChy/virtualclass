@@ -5,7 +5,7 @@ use App\Http\Controllers\auth\authentication;
 use App\Http\Controllers\allClass\Classes;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Mail;
-use App\Http\Controllers\classroom\Stream;
+use App\Http\Controllers\classroom\Class_stream;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,9 +51,13 @@ Route::get('login', [Authentication::class, 'login'])->name('login');
 
 Route::get('teacher/myclass', [Classes::class, 'teacherClass'])->name('myclass');
 Route::get('studentClass', [Classes::class, 'studentClass'])->name('studentClass');
+
+Route::get('/createClassView', function () {
+    return view('allClass/createClass');
+});
 Route::post('/create/class', [Classes::class, 'createClass'])->name('create.class');
 // Route::post('create/new/class', [Classes::class, 'createNewClass'])->name('create.new.class');
 // Route::get('myclass',[])
 
 // route for class stream
-Route::get('teacher/stream', [Stream::class, 'stream'])->name('stream');
+Route::get('stream/{classCode}', [Class_stream::class, 'stream']);

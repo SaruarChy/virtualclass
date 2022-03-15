@@ -31,42 +31,77 @@ class Classes extends Controller
         return view('allClass.studentClass', compact('classDetails'));
         // $detail['classes'][0]->subCode
     }
+
+    // --------------- crate class ajax method start--------
+    // public function createClass(Request $req)
+    // {
+
+    //     // $req->validate([
+
+    //     //     'classCode' => 'required|unique:teacher_class,classCode',
+    //     //     'batch' => 'required'
+
+    //     // ]);
+
+    //     $validator = Validator::make($req->all(), [
+    //         'classCode' => 'required|unique:teacher_class,classCode',
+    //         'subCode' => 'required',
+    //         'batch' => 'required',
+    //         'department' => 'required',
+    //     ]);
+    //     if ($validator->fails()) {
+    //         return response()->json(['status' => 0,  'error' => $validator->errors()->toArray()]);
+    //     } else {
+    //         // $values = [
+    //         //     'classCode' => $req->classCode,
+    //         //     'subCode' => $req->subCode,
+    //         //     'batch' => $req->batch,
+    //         //     'department' => $req->department
+    //         // ];
+    //         // $save = DB::table('teacher_class')->insert($values);
+
+    //         $teacherClass = new Teacher_class();
+    //         $teacherClass->classCode = json_encode($req->classCode);
+    //         $teacherClass->subCode = json_encode($req->subCode);
+    //         $teacherClass->batch = json_encode($req->batch);
+    //         $teacherClass->department = json_encode($req->department);
+    //         $save = $teacherClass->save();
+    //         if ($save) {
+    //             return response()->json(['status' => 1, 'msg' => 'New Class has been created']);
+    //         }
+    //     }
+    // }
+
+    // --------------- crate class ajax method end--------
+
+
+
+
     public function createClass(Request $req)
     {
 
-        // $req->validate([
-
-        //     'classCode' => 'required|unique:teacher_class,classCode',
-        //     'batch' => 'required'
-
-        // ]);
-
-        $validator = Validator::make($req->all(), [
+        $req->validate([
             'classCode' => 'required|unique:teacher_class,classCode',
-            'subCode' => 'required',
             'batch' => 'required',
+            'subCode' => 'required',
             'department' => 'required',
-        ]);
-        if ($validator->fails()) {
-            return response()->json(['status' => 0,  'error' => $validator->errors()->toArray()]);
-        } else {
-            // $values = [
-            //     'classCode' => $req->classCode,
-            //     'subCode' => $req->subCode,
-            //     'batch' => $req->batch,
-            //     'department' => $req->department
-            // ];
-            // $save = DB::table('teacher_class')->insert($values);
 
-            $teacherClass = new Teacher_class();
-            $teacherClass->classCode = json_encode($req->classCode);
-            $teacherClass->subCode = json_encode($req->subCode);
-            $teacherClass->batch = json_encode($req->batch);
-            $teacherClass->department = json_encode($req->department);
-            $save = $teacherClass->save();
-            if ($save) {
-                return response()->json(['status' => 1, 'msg' => 'New Class has been created']);
-            }
+        ]);
+
+        $teacherClass = new Teacher_class();
+        $teacherClass->classCode = $req->classCode;
+        $teacherClass->subCode = $req->subCode;
+        $teacherClass->batch = $req->batch;
+        $teacherClass->department = $req->department;
+        $teacherClass->teacherId = 1;
+
+        $save = $teacherClass->save();
+        if ($save) {
+            return redirect('teacher/myclass');
+            return "saved";
+        } else {
+            return back()->with('failed', 'someting wrong');
         }
+        return "hellow";
     }
 }
